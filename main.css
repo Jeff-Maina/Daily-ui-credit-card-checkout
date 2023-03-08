@@ -1,0 +1,302 @@
+body {
+  margin: none;
+  padding: none;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(50deg, #f3c680, hsla(179, 54%, 76%, 1));
+  display: flex;
+}
+
+#container {
+  height: 45em;
+  width: 50%;
+  min-width: 750px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: antiquewhite; */
+  align-items: center;
+  position: relative;
+}
+
+#container div {
+  position: absolute;
+}
+
+#card {
+  width: 60%;
+  position: relative;
+  height: 35%;
+  z-index: 100;
+  border-radius: 18px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  cursor: pointer;
+}
+
+#card div {
+  position: absolute;
+}
+
+#front-side {
+  background-color: black;
+  visibility: visible;
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+}
+
+#logo-row {
+  height: 5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* background-color: #fff; */
+}
+
+#chip {
+  position: absolute;
+  height: 60%;
+  width: 4em;
+  left: 1em;
+  background: linear-gradient(
+    225deg,
+    rgba(255, 245, 195, 1) 15%,
+    rgba(148, 82, 165, 1) 100%
+  );
+  border-radius: 10px;
+}
+
+#logo {
+  position: absolute;
+  right: 1em;
+}
+
+#card-number {
+  width: 75%;
+  height: 5em;
+  top: 5em;
+  /* background-color: aliceblue; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  margin-left: .2em;
+}
+
+#card-number span {
+  /* border: 1px solid rgb(163, 165, 168); */
+  height: 3em;
+  width: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#card-number span h1 {
+  font-family: monospace;
+  font-weight: 300;
+  margin: 0;
+  color: rgb(235, 232, 232);
+}
+
+#card-name{
+    width: 100%;
+    height: 6em;
+    /* background-color: rgb(117, 139, 158); */
+    bottom: 0em;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#user-name{
+height: 4em;
+width: auto;
+/* background-color: #fff; */
+left: 1.1em;
+}
+
+#user-name h6{
+    margin: 0;
+    font-family: monospace, serif;
+    color: grey;
+    font-weight: 200;
+    font-size: .6rem;
+    letter-spacing: 2px;
+}
+
+#user-name h2{
+    margin: 0;
+    font-family: monospace, serif;
+    color: rgb(213, 213, 213);
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+
+#card-expiry{
+    height: 4em;
+    width: 6em;
+    /* background-color: aqua; */
+    bottom: 1em;
+    right: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card-expiry h6{
+    margin: 0;
+    font-family: monospace, serif;
+    color: grey;
+    font-weight: 200;
+    font-size: .6rem;
+    margin-top: 3px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+#card-expiry span{
+    display: flex;
+    color: rgb(213, 213, 213);
+    text-align: center;
+}
+
+#card-expiry span h2{
+    font-family: monospace;
+    display: flex;
+    color: rgb(213, 213, 213);
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+#back-side {
+  visibility: hidden;
+}
+
+#form-container {
+  width: 73%;
+  height: 80%;
+  bottom: 1em;
+  background-color: #fff;
+  border-radius: 18px;
+}
+
+form{
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: black; */
+    bottom: 0;
+}
+
+form span{
+  /* background-color: antiquewhite; */
+  width: 100%;
+  display: flex;
+  height: 3em;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+form span input{
+  width: 4.7em;
+  font-size: 18px;
+  padding: 8px;
+  margin: 16px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding-left: 15px;
+  /* padding-left: em; */
+  box-sizing: border-box;
+}
+
+form span input:focus{
+  outline: none;
+  border: 1px solid rgb(254, 4, 112);
+}
+
+form label{
+  font-family: monospace;
+  margin-left: 4.5em;
+  color: #555;
+}
+
+#card-holder{
+  width: 80%;
+  align-self: center;
+  margin: 1em 0em ;
+  font-size: 18px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+#card-holder:focus{
+  outline: none;
+  border: 1px solid #fe0470;
+}
+
+#dates{
+  position: relative;
+  height: 3em;
+  width: 87%;
+  /* background-color: aqua; */
+  align-self: center;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 1.3em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#card-expiration-month,#card-expiration-year{
+  font-size: 18px;
+  padding: 8px;
+  margin-right: 7px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+#ccv{
+  position: absolute;
+  right: 0em;
+}
+
+form button{
+  font-size: 18px;
+  padding: 10px;
+  width: 80%;
+  align-self: center;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  background-color:#fe0470 ;
+}
+
+form button:hover{
+  background-color:#e82d7e ;
+}
+
+#expires-span{
+  height:1em;
+  margin: 0;
+  width: 80%;
+  position: relative;
+  justify-content: space-between;
+}
+

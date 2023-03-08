@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credit card check out</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    
+<div id="container">
+    <div id="card">
+        <div id="front-side">
+            <div id="logo-row">
+                <div id="chip"></div>
+                <div id="logo">
+                    <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="94px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="94px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="形状_1_3_" style="enable-background:new    ;"><g id="形状_1"><g><path d="M211.328,184.445l-23.465,144.208h37.542l23.468-144.208     H211.328z M156.276,184.445l-35.794,99.185l-4.234-21.358l0.003,0.007l-0.933-4.787c-4.332-9.336-14.365-27.08-33.31-42.223     c-5.601-4.476-11.247-8.296-16.705-11.559l32.531,124.943h39.116l59.733-144.208H156.276z M302.797,224.48     c0-16.304,36.563-14.209,52.629-5.356l5.357-30.972c0,0-16.534-6.288-33.768-6.288c-18.632,0-62.875,8.148-62.875,47.739     c0,37.26,51.928,37.723,51.928,57.285c0,19.562-46.574,16.066-61.944,3.726l-5.586,32.373c0,0,16.763,8.148,42.382,8.148     c25.616,0,64.272-13.271,64.272-49.37C355.192,244.272,302.797,240.78,302.797,224.48z M455.997,184.445h-30.185     c-13.938,0-17.332,10.747-17.332,10.747l-55.988,133.461h39.131l7.828-21.419h47.728l4.403,21.419h34.472L455.997,184.445z      M410.27,277.641l19.728-53.966l11.098,53.966H410.27z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#005BAC;"/></g></g></g><g id="形状_1_2_" style="enable-background:new    ;"><g id="形状_1_1_"><g><path d="M104.132,198.022c0,0-1.554-13.015-18.144-13.015H25.715     l-0.706,2.446c0,0,28.972,5.906,56.767,28.033c26.562,21.148,35.227,47.51,35.227,47.51L104.132,198.022z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#F6AC1D;"/></g></g></g></svg>
+                </div>               
+            </div>
+            <div id="card-number">
+                    <span>
+                        <h1 id="part-one"></h1>
+                    </span>
+                    <span>
+                        <h1 id="part-2"></h1>
+                    </span>
+                    <span>
+                        <h1 id="part-3"></h1>
+                    </span>
+                    <span>
+                        <h1 id="part-4"></h1>
+                    </span>
+            </div>
+            <div id="card-name">
+                <div id="user-name">
+                    <h6>CARD HOLDER</h6>
+                    <h2 id="card-holder-name"></h2>
+                </div>
+            </div>
+            <div id="card-expiry">
+                <h6>EXPIRY</h6>
+                <span><h2 id="expire-month"></h2><h2 id="expire-year"></h2></span>
+            </div>
+        </div>
+        <div id="back-side">
+        </div>
+    </div>
+    <div id="form-container">
+        <form>
+            <label>CARD NUMBER</label>
+            <span>
+                <input text="number" id="part-1-input" onkeyup="handleCardNum(1,this)" maxlength="4">
+                <input text="number" id="part-2-input" onkeyup="handleCardNum(2,this)" maxlength="4">
+                <input text="number" id="part-3-input" onkeyup="handleCardNum(3,this)" maxlength="4">
+                <input text="number" id="part-4-input" onkeyup="handleCardNum(4,this)" maxlength="4">
+            </span>
+            <label>CARD HOLDER</label>
+             <input type="text" onkeyup="handleCardOwner(this)" name="" id="card-holder">
+             <span id="expires-span">
+                <label>EXPIRATION</label>
+                <label>CCV</label>
+             </span>
+             <span id="dates">
+                <div>
+                    <select onchange="handleExpiration('month',this)" id="card-expiration-month">
+                        <option></option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select onchange="handleExpiration('year',this)"  id="card-expiration-year">
+                        <option></option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                      </select>
+                </div>
+                <div id="ccv">
+                    <input type="text" maxlength="3"/>
+                </div>
+             </span>
+             <button>SUBMIT</button>
+        </form>
+    </div>
+</div>
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
