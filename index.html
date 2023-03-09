@@ -10,7 +10,16 @@
 <body>
     
 <div id="container">
-    <div id="card">
+    <div onmouseover="handleccv()" onmouseout="removeccv()" id="card">
+        <div id="back-side">
+            <div id="magnetic-strip">
+
+            </div>
+            <div id="ccv-input">
+                <label>CCV</label>
+                <h2 id="ccv-number"></h2>
+            </div>
+        </div>
         <div id="front-side">
             <div id="logo-row">
                 <div id="chip"></div>
@@ -42,8 +51,6 @@
                 <h6>EXPIRY</h6>
                 <span><h2 id="expire-month"></h2><h2 id="expire-year"></h2></span>
             </div>
-        </div>
-        <div id="back-side">
         </div>
     </div>
     <div id="form-container">
@@ -93,7 +100,7 @@
                       </select>
                 </div>
                 <div id="ccv">
-                    <input type="text" maxlength="3"/>
+                    <input onkeyup="appendCcv(this)" onfocus="handleccv()" onblur="removeccv()" type="text" maxlength="3"/>
                 </div>
              </span>
              <button>SUBMIT</button>

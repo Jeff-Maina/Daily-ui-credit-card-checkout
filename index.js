@@ -27,3 +27,16 @@ function handleExpiration(text,elem){
     }
 }
 
+function appendCcv(elem){
+    document.getElementById("ccv-number").textContent = elem.value
+}
+
+function handleccv(){
+    document.getElementById("back-side").style.zIndex = "199"
+    document.getElementById("card").style.transform = "rotateY(180deg)"
+}
+
+function removeccv(){
+    document.getElementById("back-side").style.zIndex = "-2"
+    document.getElementById("card").style.transform = "rotateY(0deg)"
+}
